@@ -1,0 +1,116 @@
+
+<html>
+<head>
+<title>Login Prototype</title>
+
+<style type="text/css">
+
+	p{
+ 	 padding-top: 225px;
+	}
+
+	div {
+        background-color: #A9A9A9;
+  background-image: url("/Users/barathpa/Downloads/Wallpapers/desk.jpg");
+background-size : cover;
+ height: device-height;
+  width: device-width;
+}
+
+.right {
+   padding-left: 100px;
+}
+
+#Submit {
+ background-color: #bbb;
+ padding: .5em;
+ -moz-border-radius: 5px;
+ -webkit-border-radius: 5px;
+ border-radius: 6px;
+ color: black;
+ font-family: 'Marschel';
+ font-size: 20px;
+ text-decoration: none;
+ border: none;
+}
+
+#Submit:hover {
+ border: none;
+ background: orange;
+ box-shadow: 0px 0px 1px #777;
+}
+
+#reset {
+ background-color: #bbb;
+ padding: .5em;
+ -moz-border-radius: 5px;
+ -webkit-border-radius: 5px;
+ border-radius: 6px;
+ color: black;
+ font-family: 'Marschel';
+ font-size: 20px;
+ text-decoration: none;
+ border: none;
+}
+
+#reset:hover {
+ border: none;
+ background: orange;
+ box-shadow: 0px 0px 1px #777;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div>
+<p>
+<form name="loginForm" method="post" action="login.php">
+
+<table width=40%device-width height=40%device-height bgcolor="#949996" align="center">
+
+<tr>
+<td colspan=2><center><font size=4><b>Exam Login Portal</b></font></center></td>
+</tr>
+
+<tr> <td> <center> <td>
+<b>Token Number:</b> <input type="text" size=25 name="userid">
+</td> </center> </td> </tr>
+
+
+<tr><td><center>
+<td><b>Password:</b><input type="Password" size=25 name="pwd"></td></center></td>
+</tr>
+
+<tr>
+<td align="center"><button id ="Submit" input type="Submit" onclick="return check(this.form)">Submit</td>
+<td align="center" class="right"><button id ="Reset" input type="Reset">Reset</td>
+
+</td>
+</tr>
+
+</table>
+</form>
+</p>
+
+<script language="javascript">
+function check(form)
+{
+
+if(form.userid.value == "Roseindia" && form.pwd.value == "Roseindia")
+{
+	return true;
+}
+else
+{
+	alert("Error Password or Username")
+	return false;
+}
+}
+</script>
+</div>
+</body>
+
+</html> 
