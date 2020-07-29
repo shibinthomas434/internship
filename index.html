@@ -1,8 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>NTTF Login Page</title>
+	<title>Login Page</title>
 <link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript">
+	 function AddRequired()
+        {
+            document.getElementById('login').required = true;
+        }
+        function RemoveRequired()
+        {
+            document.getElementById('register').required = false;
+        }
+</script>
 </head>
 <body style="background-color:#74ab9f">
 	<div class="wrapper">
@@ -10,12 +20,13 @@
 		<h1><center>Exam Login Page</center></h1>
 	
 	<form action="login.php" method="post" class="form">
-	<label><b>Token Number</b></label><br>
-	<input type="text" name="tokennumber" placeholder="Type your Token Number" class="textbox" required=""><br>
+	<label><b>Username</b></label><br>
+	<input type="text" name="Username" placeholder="Type your Username" class="textbox" required=""><br>
 	<label><b>Password</b></label><br>
 	<input type="Password" name="password" placeholder="Type your Password" class="textbox" required=""><br>
 	<center><input type="submit" name="login" value="Login" class="login-button" ></center>
-	<center><input type="submit" name="login" value="Register" class="login-button" ></center>
+	<a href="register.html">
+	<center><input type="button" onclick ="RemoveRequired();" name="register" value="Register" class="login-button" ></center></a>
 	</div>
 	</form>
 </body>
